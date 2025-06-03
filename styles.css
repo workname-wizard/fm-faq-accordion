@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap&family=Sedgwick+Ave&display=swap');
+:root{
+--White: hsl(0, 100%, 100%);
+--Purple100: hsl(275, 100%, 97%);
+--Purple600: hsl(292, 16%, 49%);
+--Purple950: hsl(292, 42%, 14%);
+  --wizard-yellow:rgba(255, 252, 93, 1);
+  --wizard-pink:rgba(255, 0, 250, 1);
+  --wizard-green:rgba(69, 228, 4, 0.8);
+
+font-size:16px;
+font-family:"Work Sans", sans-serif;
+
+}
+body{
+    background-color:var(--Purple100);
+}
+main{
+    background-color: var(--White);
+    justify-content: center;
+    height:fit-content;
+    max-width:572px;
+    margin:10% auto auto auto;
+    border-radius: 16px;
+    
+}
+header{
+    display:flex;
+    flex-direction: row;
+    justify-content: left;
+}
+header h1{
+    Font-size:3.5rem;
+    padding: 1rem;
+
+}
+
+.question-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    padding: 1rem;
+    border-bottom: 2px solid rgba(201, 201, 201, 0.6);
+    width:80%;
+    margin: auto;
+
+}
+.question-container:last-of-type {
+  border-bottom: none;
+}
+.question{
+    font-size:1.2rem;
+    font-weight:700;
+    color:var(--Purple950);
+    font-style: initial;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.question:hover{
+    color:var(--Purple600);
+}
+
+.answer {
+  color: var(--Purple600);
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+  margin: auto;
+}
+
+.extender {
+  height: 24px;
+  width: 24px;
+  background-image: url('https://raw.githubusercontent.com/workname-wizard/fm-faq-accordion/0b732fdbbfc5b8cf3bd654e80b41b222594c7652/faq-accordion-main/assets/images/icon-plus.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.extender.open {
+  background-image: url('https://raw.githubusercontent.com/workname-wizard/fm-faq-accordion/0b732fdbbfc5b8cf3bd654e80b41b222594c7652/faq-accordion-main/assets/images/icon-minus.svg');
+}
+.credit{
+    all:unset;
+    margin:auto;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--wizard-yellow);
+    width:fit-content;
+    border-radius:12px;
+    margin-top:16px;
+
+
+}
+.credit p{
+        color:var(--wizard-pink);
+        font-family: 'Sedgwick Ave',sans-serif;
+        font-size:1.8rem;
+        margin:0.8rem;
+}
+.credit img{
+    width:auto;
+    height:1.8rem;
+    margin:0.8rem;
+}
+
+.credit:hover{
+    background-color:var(--wizard-green);
+}
+
+
+@media(min-width:600px){
+    body{
+        background-image: url("https://raw.githubusercontent.com/workname-wizard/fm-faq-accordion/0b732fdbbfc5b8cf3bd654e80b41b222594c7652/faq-accordion-main/assets/images/background-pattern-desktop.svg");
+        background-size:contain;
+        background-repeat:no-repeat;
+    }
+
+
+}
+
+@media(max-width:600px){
+    body{
+        background-image: url("https://raw.githubusercontent.com/workname-wizard/fm-faq-accordion/0b732fdbbfc5b8cf3bd654e80b41b222594c7652/faq-accordion-main/assets/images/background-pattern-mobile.svg");
+        background-size:contain;
+        background-repeat:no-repeat;
+
+    }
+}
